@@ -1,7 +1,7 @@
 {
   "name": "Git-in-Team",
   "description": "Let people invite themselves to your GitHub organization/team",
-  "logo": "",
+  "logo": "https://raw.githubusercontent.com/RattleSN4K3/git-in-team/master/logo.png",
   "repository": "https://github.com/RattleSN4K3/git-in-team",
   "keywords": ["node", "github", "team", "organization"],
   "env": {

@@ -19,6 +19,7 @@ Use the button below to deploy to Heroku
 [![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/RattleSN4K3/git-in-team/tree/master)
 
 Or manually setup your Heroko app:
+
 0. Create a new Heroku app  
 `heroku apps:create APP_NAME`
 0. Provide GITHUB_ORGANIZATION  
@@ -58,7 +59,7 @@ Options:
 
 ### Dynamic Badge
 
-![](screenshots/preview_badge.gif)
+[![](screenshots/preview_badge.gif)](https://github.com/RattleSN4K3/git-in-team)
 
 ```html
 <script async defer src="http://githubteam.yourdomain.com/gitinteam.js"></script>
@@ -72,7 +73,7 @@ or for the large version, append `?large`:
 
 ### SVG
 
-![](screenshots/preview_svg.png)
+[![](screenshots/preview_svg.png)](https://github.com/RattleSN4K3/git-in-team)
 
 ```html
 <img src="http://githubteam.yourdomain.com/badge.svg">
@@ -80,15 +81,15 @@ or for the large version, append `?large`:
 
 or change the text by appending the `t` query parameter with the value of your text. Also by appending `s`, you can switch to a different color mode:
 
-```html
+```
 <img src="http://githubteam.yourdomain.com/badge.svg?s&t=TEAM">
 ```
 
-![](screenshots/preview_svg_alt.png)
+[![](screenshots/preview_svg_alt.png)](https://github.com/RattleSN4K3/git-in-team)
 
 ### Landing page
 
-![](screenshots/preview_landing.png)
+[![](screenshots/preview_landing.png)](https://github.com/RattleSN4K3/git-in-team)
 
 Point to `http://githubteam.yourdomain.com`.
 
@@ -100,9 +101,9 @@ doesn't have one configured, it won't be shown like in the picture above.
 
 Visit your app page once and in order to setup your GitHub application, API token and app tokens.
 
-![](screenshots/preview_auth_1.png)
+[![](screenshots/preview_auth_1.png)](https://github.com/RattleSN4K3/git-in-team)
 
-![](screenshots/preview_auth_2.png)
+[![](screenshots/preview_auth_2.png)](https://github.com/RattleSN4K3/git-in-team)
 
 **Note:** This step is very important if the important credentials are not entered before. This would allow other users to take over your app.
 
