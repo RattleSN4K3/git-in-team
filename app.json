@@ -1,0 +1,30 @@
+{
+  "name": "Git-in-Team",
+  "description": "Let people invite themselves to your GitHub organization/team",
+  "logo": "",
+  "repository": "https://github.com/RattleSN4K3/git-in-team",
+  "keywords": ["node", "github", "team", "organization"],
+  "env": {
+    "GITHUB_ORGANIZATION": {
+      "description": "Your GitHub's organization (github.com/orgs/**this**)",
+      "required": true
+    },
+    "GITHUB_API_TOKEN": {
+      "description": "A Github API token with access to the organization's adminstration",
+      "required": false
+    },
+    "GITHUB_API_TYPE": {
+      "description": "A Github API token type (which is generally 'Bearer')",
+      "required": false,
+      "value": "Bearer"
+    },
+    "GITHUB_APP_ID": {
+      "description": "Client id of the registered application",
+      "required": false
+    },
+    "GITHUB_APP_SECRET": {
+      "description": "Client secret of the registered application",
+      "required": false
+    }
+  }
+}

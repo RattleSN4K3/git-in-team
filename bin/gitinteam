@@ -1,0 +1,33 @@
+#!/usr/bin/env node
+
+var pkg = require('../package');
+var program = require('commander');
+var gitinteam = require('../node');
+
+program
+.version(pkg.version)
+.usage('[options] <github-organization> [<api-token> <api-token-type> <app-id> <app-secret>]')
+.option('-p, --port <port>', 'Port to listen on [$PORT or 3000]', process.env.PORT || 3000)
+.option('-i, --interval <int>', 'How frequently (ms) to poll Slack [$GITHUB_INTERVAL or 30000]', process.env.GITHUB_INTERVAL || 30000)
+.option('-s, --silent', 'Do not print out warns or errors')
+.option('-c, --css <file>', 'Full URL to a custom CSS file to use on the main page')
+.parse(process.argv);
+
+console.log("Parm count: "+program.args.length);
+if (program.args.length > 0) {
+  program.org = program.args[0];
+}
+if (program.args.length < 1 || (program.args.length > 1 && program.args.length != 5)) {
+  program.help();
+} else {
+  program.token = program.args[1];
+  program.token_type = program.args[2];
+  program.client_id = program.args[3];
+  program.client_secret = program.args[4];
+}
+
+var port = program.port;
+gitinteam(program).listen(port, function(err){
+  if (err) throw err;
+  if (!program.silent) console.log('%s - listening on *:%d', new Date().toISOString(), port);
+});
